@@ -1,0 +1,101 @@
+@use "theme";
+
+body {
+    background-color: theme.$dark-slate-blue;
+    color: theme.$powder-blue;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+        sans-serif;
+    // margin-top: 0px;
+    margin: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    // margin: 0px -8px;
+    display: flex;
+    // justify-content: space-evenly;
+    // justify-items: center;
+    // align-self: center;
+    height: 4vh;
+    background-color: theme.$powder-blue;
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    // overflow: auto;
+
+    &__link {
+        color: theme.$dark-slate-blue;
+        width: 25%;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: theme.$dark-slate-blue;
+            color: theme.$powder-blue;
+            // border: 3px solid theme.$powder-blue;
+            outline: 2px solid theme.$powder-blue;
+            outline-offset: -2px;
+            // border-radius: 5px;
+            // padding: -20px;
+            // margin: -5px;
+        }
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: -40px;
+}
+
+main {
+    margin: 0px 8px;
+}
+
+#about {
+    font-size: x-large;
+}
+
+#tech {
+    & ul {
+        list-style: square;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0px;
+        & li:nth-of-type(1) {
+            list-style-image: url(https://img.icons8.com/external-flaticons-flat-flat-icons/50/000000/external-html-no-code-flaticons-flat-flat-icons-2.png);
+            // display: flex;
+            // padding: 10px;
+        }
+    }
+}
+
+#projects {
+    display: flex;
+    justify-content: space-evenly;
+    // flex-wrap: wrap;
+    & img {
+        width: 20vw;
+    }
+    & a {
+        color: theme.$powder-blue;
+    }
+    & div {
+        max-width: 20vw;
+    }
+}
+
+#contact {
+    margin: 8px 8px;
+    & a {
+        color: theme.$powder-blue;
+    }
+}

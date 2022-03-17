@@ -1,0 +1,84 @@
+/* SCSS HEX */
+/* SCSS Gradient */
+body {
+  background-color: #41337aff;
+  color: #c2efebff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 4vh;
+  background-color: #c2efebff;
+  font-size: large;
+  width: 100%;
+  text-align: center;
+}
+.navbar__link {
+  color: #41337aff;
+  width: 25%;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__link:hover {
+  background-color: #41337aff;
+  color: #c2efebff;
+  outline: 2px solid #c2efebff;
+  outline-offset: -2px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: xx-large;
+  text-align: center;
+  margin-top: -40px;
+}
+
+main {
+  margin: 0px 8px;
+}
+
+#about {
+  font-size: x-large;
+}
+
+#tech ul {
+  list-style: square;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px;
+}
+#tech ul li:nth-of-type(1) {
+  list-style-image: url(https://img.icons8.com/external-flaticons-flat-flat-icons/50/000000/external-html-no-code-flaticons-flat-flat-icons-2.png);
+}
+
+#projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+#projects img {
+  width: 20vw;
+}
+#projects a {
+  color: #c2efebff;
+}
+#projects div {
+  max-width: 20vw;
+}
+
+#contact {
+  margin: 8px 8px;
+}
+#contact a {
+  color: #c2efebff;
+}
