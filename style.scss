@@ -1,4 +1,12 @@
 @use "theme";
+$xs: 480px;
+$sm: 768px;
+$md: 900px;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
 
 body {
     background-color: theme.$dark-slate-blue;
@@ -70,11 +78,11 @@ main {
         display: flex;
         justify-content: space-evenly;
         padding: 0px;
-        & li:nth-of-type(1) {
-            list-style-image: url(https://img.icons8.com/external-flaticons-flat-flat-icons/50/000000/external-html-no-code-flaticons-flat-flat-icons-2.png);
-            // display: flex;
-            // padding: 10px;
-        }
+        // & li:nth-of-type(1) {
+        //     list-style-image: url(https://img.icons8.com/external-flaticons-flat-flat-icons/50/000000/external-html-no-code-flaticons-flat-flat-icons-2.png);
+        //     // display: flex;
+        //     // padding: 10px;
+        // }
     }
 }
 
@@ -83,19 +91,53 @@ main {
     justify-content: space-evenly;
     // flex-wrap: wrap;
     & img {
-        width: 20vw;
+        width: 100%;
     }
     & a {
         color: theme.$powder-blue;
     }
     & div {
-        max-width: 20vw;
+        max-width: 25vw;
+        padding: 10px 0;
+    }
+    @media only screen and (max-width: $xs) {
+        flex-direction: column;
+        align-items: center;
+        // & img {
+        // width: 80vw;
+        // }
+        & div {
+            max-width: 80vw;
+        }
+    }
+    @media only screen and (min-width: ($xs+1)) and (max-width: $sm) {
+        // flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        // & img {
+        // width: 100%;
+        // }
+        & div {
+            max-width: 40vw;
+            // display: flex;
+            // flex-direction: column;
+            // justify-self: space-between;
+        }
     }
 }
 
 #contact {
     margin: 8px 8px;
-    & a {
-        color: theme.$powder-blue;
+    // & a {
+    //     color: theme.$powder-blue;
+    // }
+    & #email:hover {
+        content: url(https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-color-xnimrodx-4.png);
+    }
+    & #github:hover {
+        content: url(https://img.icons8.com/plasticine/64/github-squared.png);
+    }
+    & #linkedin:hover {
+        content: url(https://img.icons8.com/fluency/64/linkedin.png);
     }
 }

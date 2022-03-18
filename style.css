@@ -1,5 +1,10 @@
 /* SCSS HEX */
 /* SCSS Gradient */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
 body {
   background-color: #41337aff;
   color: #c2efebff;
@@ -58,27 +63,49 @@ main {
   justify-content: space-evenly;
   padding: 0px;
 }
-#tech ul li:nth-of-type(1) {
-  list-style-image: url(https://img.icons8.com/external-flaticons-flat-flat-icons/50/000000/external-html-no-code-flaticons-flat-flat-icons-2.png);
-}
 
 #projects {
   display: flex;
   justify-content: space-evenly;
 }
 #projects img {
-  width: 20vw;
+  width: 100%;
 }
 #projects a {
   color: #c2efebff;
 }
 #projects div {
-  max-width: 20vw;
+  max-width: 25vw;
+  padding: 10px 0;
+}
+@media only screen and (max-width: 480px) {
+  #projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects div {
+    max-width: 80vw;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #projects {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #projects div {
+    max-width: 40vw;
+  }
 }
 
 #contact {
   margin: 8px 8px;
 }
-#contact a {
-  color: #c2efebff;
+#contact #email:hover {
+  content: url(https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-color-xnimrodx-4.png);
+}
+#contact #github:hover {
+  content: url(https://img.icons8.com/plasticine/64/github-squared.png);
+}
+#contact #linkedin:hover {
+  content: url(https://img.icons8.com/fluency/64/linkedin.png);
 }
