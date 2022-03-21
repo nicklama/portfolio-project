@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background-color: #41337aff;
+  background: linear-gradient(180deg, #331e36ff, #41337aff, #6ea4bfff, #c2efebff, #ecfee8ff);
   color: #c2efebff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   margin: 0;
@@ -25,8 +25,8 @@ body {
 .navbar__link {
   color: #41337aff;
   width: 25%;
-  text-decoration: none;
   height: 100%;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +36,12 @@ body {
   color: #c2efebff;
   outline: 2px solid #c2efebff;
   outline-offset: -2px;
+}
+@media only screen and (max-width: 480px) {
+  .navbar {
+    font-size: medium;
+    height: 5vh;
+  }
 }
 
 .title {
@@ -48,6 +54,16 @@ body {
   text-align: center;
   margin-top: -40px;
 }
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: x-large;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: large;
+  }
+}
 
 main {
   margin: 0px 8px;
@@ -55,50 +71,101 @@ main {
 
 #about {
   font-size: x-large;
+  height: 35vh;
+}
+@media only screen and (max-width: 900px), screen and (max-height: 768px) {
+  #about {
+    height: auto;
+    font-size: large;
+  }
 }
 
-#tech ul {
-  list-style: square;
+.tech {
+  color: #41337aff;
+  height: 30vh;
+}
+.tech__icons {
   display: flex;
-  justify-content: space-evenly;
-  padding: 0px;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 768px), screen and (max-height: 768px) {
+  .tech {
+    height: auto;
+  }
+  .tech__icons {
+    flex-wrap: wrap;
+  }
+  .tech__icons img {
+    width: 96px;
+  }
 }
 
-#projects {
-  display: flex;
-  justify-content: space-evenly;
+.projects {
+  display: grid;
+  gap: 20px;
+  height: 95vh;
+  grid-template-rows: 5vh repeat(3, 25vh);
+  color: #41337aff;
+  padding-bottom: 20px;
 }
-#projects img {
-  width: 100%;
+.projects h2 {
+  align-self: center;
 }
-#projects a {
-  color: #c2efebff;
+.projects img {
+  height: 100%;
+  border: 3px solid #41337aff;
 }
-#projects div {
-  max-width: 25vw;
+.projects a {
+  color: #41337aff;
+}
+.projects div {
   padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects div span {
+  width: 50vw;
+  padding: 0 10px;
+}
+.projects--second {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  .projects {
+    height: auto;
+    grid-template-rows: 5vh repeat(3, 40vh);
+    padding-top: 20px;
+  }
+  .projects img {
+    height: 50%;
+    overflow: auto;
+  }
+  .projects div {
+    flex-direction: column;
+  }
+  .projects div span {
+    width: auto;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 480px) {
-  #projects {
-    flex-direction: column;
-    align-items: center;
+  .projects {
+    grid-template-rows: 5vh repeat(3, 50vh);
   }
-  #projects div {
-    max-width: 80vw;
+  .projects img {
+    height: 40%;
   }
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  #projects {
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  #projects div {
-    max-width: 40vw;
+  .projects h2 {
+    align-self: flex-start;
   }
 }
 
 #contact {
-  margin: 8px 8px;
+  padding: 1px 8px;
+  background: #41337aff;
+  text-align: center;
 }
 #contact #email:hover {
   content: url(https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-color-xnimrodx-4.png);
