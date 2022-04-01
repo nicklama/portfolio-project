@@ -3,6 +3,8 @@
 ## Description
 
 This project is designed to be the central hub to showcase what I have learnt throughout my 3 month \_nology course and also provide visitors with an insight into who I am. It contains links and descriptions for all of the other projects I have built and the various tech stacks I have been exposed to.
+![image](https://user-images.githubusercontent.com/100544978/161193706-8f9e33d7-70b0-4b85-98b7-99378d72eaeb.png)
+
 
 ## Goals
 
@@ -14,11 +16,11 @@ The portfolio must utilise SCSS for styling, B.E.M naming convention and added r
 
 ### MVP
 
--   [x] A landing section with name and title
--   [x] An About section with a little intro to myself
--   [x] A Tech stacks/skills section with all the languages I have learned during the course
--   [x] A Project section where each project has a description, link to a live version and link to the matching GitHub Repo
--   [x] A Contact section with my email, GitHub and LinkedIn profile links
+-   [x] A home section with my name and title
+-   [x] An about section with a little intro to myself
+-   [x] A tech stacks/skills section with all the languages I have learned during the course
+-   [x] A project section where each project has a description, link to a live version and link to the matching GitHub Repo
+-   [x] A contact section with my email, GitHub and LinkedIn profile links
 
 ## Implementation
 
