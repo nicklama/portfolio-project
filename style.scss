@@ -1,4 +1,5 @@
 @use "theme";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 $xs: 480px;
 $sm: 768px;
 $md: 900px;
@@ -9,13 +10,15 @@ html {
 }
 
 body {
-    // background-color: theme.$dark-slate-blue;
     background: theme.$gradient-bottom;
     color: theme.$powder-blue;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-        sans-serif;
-    // margin-top: 0px;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
+}
+
+::selection {
+    background: theme.$powder-blue;
+    color: theme.$dark-slate-blue;
 }
 
 .navbar {
@@ -27,6 +30,7 @@ body {
     font-size: large;
     width: 100%;
     text-align: center;
+    font-weight: bold;
 
     &__link {
         color: theme.$dark-slate-blue;
@@ -53,11 +57,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     font-size: xx-large;
     text-align: center;
-    margin-top: -40px;
+    margin: -40px 20px 0px 20px;
     @media only screen and (max-width: $sm) {
         font-size: x-large;
     }
@@ -67,31 +70,28 @@ body {
 }
 
 main {
-    margin: 0px 8px;
+    margin: 0px 20px;
 }
 
 #about {
     font-size: x-large;
-    height: 35vh;
     @media only screen and (max-width: $md), screen and (max-height: $sm) {
-        height: auto;
         font-size: large;
+        text-align: justify;
     }
 }
 
 .tech {
     color: theme.$dark-slate-blue;
     height: 30vh;
-    &__icons {
-        display: flex;
-        justify-content: space-around;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
     @media only screen and (max-width: $sm), screen and (max-height: $sm) {
-        &__icons {
-            flex-wrap: wrap;
-            & img {
-                width: 96px;
-            }
+        flex-wrap: wrap;
+        & img {
+            width: 96px;
         }
         height: auto;
     }
@@ -102,23 +102,21 @@ main {
     gap: 20px;
     height: 95vh;
     grid-template-rows: 5vh repeat(3, 25vh);
-    // grid-template-columns: 90vw;
     color: theme.$dark-slate-blue;
     padding-bottom: 20px;
     & h2 {
         align-self: center;
+        text-align: center;
+        font-size: 40px;
     }
     & img {
-        // width: 25%;
         height: 100%;
         border: 3px solid theme.$dark-slate-blue;
     }
     & a {
-        // color: theme.$powder-blue;
         color: theme.$dark-slate-blue;
     }
     & div {
-        // max-width: 50vw;
         padding: 10px 0;
         display: flex;
         justify-content: center;
@@ -156,6 +154,7 @@ main {
         }
         & h2 {
             align-self: flex-start;
+            font-size: 30px;
         }
     }
 }

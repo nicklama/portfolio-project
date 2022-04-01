@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <title>Portfolio Project - Nick</title>
+        <title>Nick's Web Portfolio</title>
     </head>
     <body>
         <nav class="navbar">
@@ -24,11 +24,27 @@
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I was first exposed to programming while studying a Bachelor of Science in
-                    Mathematics. I enjoyed utilising my mathematical expertise to create functions
-                    and algorithms in MATLAB. After graduating I worked in customer service then
-                    later as an Accounts Receivable Team Leader but I always desired to get back to
-                    exploring my love of tech.
+                    I am a mathematics graduate with a real passion for applying my analytical lens
+                    to solve problems in meaningful contexts. I was first exposed to programming
+                    while studying. I enjoyed utilising my mathematical expertise to create
+                    functions and algorithms in MATLAB. After graduating I worked in customer
+                    service then later as an Accounts Receivable Team Leader but I always desired to
+                    get back to exploring my love of tech.
+                </p>
+                <p>
+                    Growing up my dad would always have the latest gadgets which is where my keen
+                    interest in tech started. Later I got into building custom computers as I really
+                    enjoyed seeing how all the parts worked together in unison. After working in
+                    accounting for 6 months, I decided to look for a change and discovered _nology.
+                    The _nology training program appealed to me as it appeared to be very structured
+                    and offered up-to-date skills for the current tech market.
+                </p>
+                <p>
+                    In my spare time, I enjoy going to the movies, playing video games, tennis and
+                    collecting hip-hop vinyls. I like PC gaming because if something is not
+                    functioning correctly, often you can research the problem online and solve it
+                    yourself for the best experience possible. I am also currently learning Italian
+                    as I hope to visit to my grandparent's hometown someday soon.
                 </p>
                 <p>
                     Studying at _nology as a Junior Software Engineer is providing me with the
@@ -38,31 +54,22 @@
                 </p>
             </section>
             <section id="tech" class="tech">
-                <h2>Tech Skills</h2>
-                <!-- <ul>
-                    <li>HTML</li>
-                    <li>CSS/SCSS</li>
-                    <li>JavaScript</li>
-                    <li>Git</li>
-                </ul> -->
-                <span class="tech__icons">
-                    <img
-                        src="https://img.icons8.com/external-flaticons-flat-flat-icons/128/external-html-no-code-flaticons-flat-flat-icons.png"
-                        alt="HTML"
-                        title="HTML"
-                    />
-                    <img
-                        src="https://img.icons8.com/external-flaticons-flat-flat-icons/128/external-css-no-code-flaticons-flat-flat-icons.png"
-                        alt="CSS"
-                        title="SCSS/CSS"
-                    />
-                    <img
-                        src="https://img.icons8.com/external-fauzidea-flat-fauzidea/128/external-js-file-file-extension-fauzidea-flat-fauzidea.png"
-                        alt="JavaScript"
-                        title="JavaScript"
-                    />
-                    <img src="https://img.icons8.com/nolan/128/git.png" alt="Git" title="Git" />
-                </span>
+                <img
+                    src="https://img.icons8.com/external-flaticons-flat-flat-icons/128/external-html-no-code-flaticons-flat-flat-icons.png"
+                    alt="HTML"
+                    title="HTML"
+                />
+                <img
+                    src="https://img.icons8.com/external-flaticons-flat-flat-icons/128/external-css-no-code-flaticons-flat-flat-icons.png"
+                    alt="CSS"
+                    title="SCSS/CSS"
+                />
+                <img
+                    src="https://img.icons8.com/external-fauzidea-flat-fauzidea/128/external-js-file-file-extension-fauzidea-flat-fauzidea.png"
+                    alt="JavaScript"
+                    title="JavaScript"
+                />
+                <img src="https://img.icons8.com/nolan/128/git.png" alt="Git" title="Git" />
             </section>
 
             <section id="projects" class="projects">
@@ -121,17 +128,23 @@
 
         <footer id="contact">
             <h3>Contact Me</h3>
-            <a id="email" href="mailto:nicklamattina@outlook.com.au">
+            <a id="email" onclick="copyEmail()">
                 <img
                     src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-xnimrodx-4.png"
                     alt="Email"
             /></a>
-            <a id="github" href="https://github.com/nicklama"
+            <a id="github" href="https://github.com/nicklama" target="_blank"
                 ><img src="https://img.icons8.com/carbon-copy/64/github-squared.png" alt="Github"
             /></a>
-            <a id="linkedin" href="https://www.linkedin.com/in/nicklamattina/"
+            <a id="linkedin" href="https://www.linkedin.com/in/nicklamattina/" target="_blank"
                 ><img src="https://img.icons8.com/dotty/64/linkedin.png" alt="LinkedIn"
             /></a>
         </footer>
     </body>
+    <script>
+        const copyEmail = () => {
+            navigator.clipboard.writeText("nicklamattina@outlook.com.au");
+            alert("Email copied to the clipboard :)");
+        };
+    </script>
 </html>
