@@ -7,15 +7,15 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #331e36ff, #41337aff, #6ea4bfff, #c2efebff, #ecfee8ff);
-  color: #c2efebff;
+  background: linear-gradient(180deg, #331e36, #41337a, #6ea4bf, #c2efeb, #ecfee8);
+  color: #c2efeb;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
 ::selection {
-  background: #c2efebff;
-  color: #41337aff;
+  background: #c2efeb;
+  color: #41337a;
 }
 
 .navbar {
@@ -23,14 +23,14 @@ body {
   top: 0;
   display: flex;
   height: 4vh;
-  background-color: #c2efebff;
+  background-color: #c2efeb;
   font-size: large;
   width: 100%;
   text-align: center;
   font-weight: bold;
 }
 .navbar__link {
-  color: #41337aff;
+  color: #41337a;
   width: 25%;
   height: 100%;
   text-decoration: none;
@@ -39,9 +39,9 @@ body {
   justify-content: center;
 }
 .navbar__link:hover {
-  background-color: #41337aff;
-  color: #c2efebff;
-  outline: 2px solid #c2efebff;
+  background-color: #41337a;
+  color: #c2efeb;
+  outline: 2px solid #c2efeb;
   outline-offset: -2px;
 }
 @media only screen and (max-width: 480px) {
@@ -78,6 +78,9 @@ main {
 #about {
   font-size: x-large;
 }
+#about p {
+  color: #ecfee8;
+}
 @media only screen and (max-width: 900px), screen and (max-height: 768px) {
   #about {
     font-size: large;
@@ -86,15 +89,21 @@ main {
 }
 
 .tech {
-  color: #41337aff;
+  color: #41337a;
   height: 30vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-image: url(https://wallpaperaccess.com/full/1745055.jpg);
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 -20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 768px), screen and (max-height: 768px) {
   .tech {
-    flex-wrap: wrap;
     height: auto;
   }
   .tech img {
@@ -105,9 +114,8 @@ main {
 .projects {
   display: grid;
   gap: 20px;
-  height: 95vh;
-  grid-template-rows: 5vh repeat(3, 25vh);
-  color: #41337aff;
+  grid-template-rows: 10vh repeat(4, 25vh);
+  color: #41337a;
   padding-bottom: 20px;
 }
 .projects h2 {
@@ -115,12 +123,18 @@ main {
   text-align: center;
   font-size: 40px;
 }
-.projects img {
+.projects > div > a {
   height: 100%;
-  border: 3px solid #41337aff;
+  max-width: 50%;
+}
+.projects img {
+  max-height: 100%;
+  max-width: 100%;
+  border: 3px solid #41337a;
+  border-radius: 3px;
 }
 .projects a {
-  color: #41337aff;
+  color: #41337a;
 }
 .projects div {
   padding: 10px 0;
@@ -138,13 +152,8 @@ main {
 }
 @media only screen and (max-width: 768px) {
   .projects {
-    height: auto;
-    grid-template-rows: 5vh repeat(3, 40vh);
+    grid-template-rows: 5vh repeat(4, auto);
     padding-top: 20px;
-  }
-  .projects img {
-    height: 50%;
-    overflow: auto;
   }
   .projects div {
     flex-direction: column;
@@ -155,29 +164,25 @@ main {
   }
 }
 @media only screen and (max-width: 480px) {
-  .projects {
-    grid-template-rows: 5vh repeat(3, 50vh);
-  }
-  .projects img {
-    height: 40%;
-  }
   .projects h2 {
-    align-self: flex-start;
     font-size: 30px;
+  }
+  .projects > div > a {
+    max-width: 75%;
   }
 }
 
 #contact {
   padding: 1px 8px;
-  background: #41337aff;
+  background: #41337a;
   text-align: center;
 }
+#contact svg {
+  height: 50px;
+}
+#contact svg:hover {
+  fill: #c2efeb;
+}
 #contact #email:hover {
-  content: url(https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-color-xnimrodx-4.png);
-}
-#contact #github:hover {
-  content: url(https://img.icons8.com/plasticine/64/github-squared.png);
-}
-#contact #linkedin:hover {
-  content: url(https://img.icons8.com/fluency/64/linkedin.png);
+  cursor: pointer;
 }

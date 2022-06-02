@@ -75,6 +75,9 @@ main {
 
 #about {
     font-size: x-large;
+    & p {
+        color: theme.$honeydew;
+    }
     @media only screen and (max-width: $md), screen and (max-height: $sm) {
         font-size: large;
         text-align: justify;
@@ -87,9 +90,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-image: url(https://wallpaperaccess.com/full/1745055.jpg);
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0 -20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: $sm), screen and (max-height: $sm) {
-        flex-wrap: wrap;
         & img {
             width: 96px;
         }
@@ -100,8 +109,7 @@ main {
 .projects {
     display: grid;
     gap: 20px;
-    height: 95vh;
-    grid-template-rows: 5vh repeat(3, 25vh);
+    grid-template-rows: 10vh repeat(4, 25vh);
     color: theme.$dark-slate-blue;
     padding-bottom: 20px;
     & h2 {
@@ -109,9 +117,15 @@ main {
         text-align: center;
         font-size: 40px;
     }
-    & img {
+    & > div > a {
         height: 100%;
+        max-width: 50%;
+    }
+    & img {
+        max-height: 100%;
+        max-width: 100%;
         border: 3px solid theme.$dark-slate-blue;
+        border-radius: 3px;
     }
     & a {
         color: theme.$dark-slate-blue;
@@ -132,13 +146,8 @@ main {
     }
 
     @media only screen and (max-width: $sm) {
-        height: auto;
-        grid-template-rows: 5vh repeat(3, 40vh);
+        grid-template-rows: 5vh repeat(4, auto);
         padding-top: 20px;
-        & img {
-            height: 50%;
-            overflow: auto;
-        }
         & div {
             flex-direction: column;
             & span {
@@ -148,13 +157,11 @@ main {
         }
     }
     @media only screen and (max-width: $xs) {
-        grid-template-rows: 5vh repeat(3, 50vh);
-        & img {
-            height: 40%;
-        }
         & h2 {
-            align-self: flex-start;
             font-size: 30px;
+        }
+        & > div > a {
+            max-width: 75%;
         }
     }
 }
@@ -163,13 +170,13 @@ main {
     padding: 1px 8px;
     background: theme.$dark-slate-blue;
     text-align: center;
+    & svg {
+        height: 50px;
+        &:hover {
+            fill: theme.$powder-blue;
+        }
+    }
     & #email:hover {
-        content: url(https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/external-email-contact-us-xnimrodx-lineal-color-xnimrodx-4.png);
-    }
-    & #github:hover {
-        content: url(https://img.icons8.com/plasticine/64/github-squared.png);
-    }
-    & #linkedin:hover {
-        content: url(https://img.icons8.com/fluency/64/linkedin.png);
+        cursor: pointer;
     }
 }

@@ -1,10 +1,10 @@
 # Nicholas Lamattina's Web Portfolio
 
-## Description
+## Introduction
 
 This project is designed to be the central hub to showcase what I have learnt throughout my 3 month \_nology course and also provide visitors with an insight into who I am. It contains links and descriptions for all of the other projects I have built and the various tech stacks I have been exposed to.
-![image](https://user-images.githubusercontent.com/100544978/161193706-8f9e33d7-70b0-4b85-98b7-99378d72eaeb.png)
 
+![Portfolio Frontpage](https://user-images.githubusercontent.com/100544978/161193706-8f9e33d7-70b0-4b85-98b7-99378d72eaeb.png)
 
 ## Goals
 
@@ -30,7 +30,7 @@ Initially, I had all my projects listed in one row but I decided to revamp the s
 
 ## Future of the Project
 
-Given more time, I would like to add animations/effects to the portfolio such as an interactive background and projects section to make them stand out more. I will contine to update my website as I complete more projects during my \_nology course and beyond to ensure it is an up-to-date hub for visitors to see.
+Given more time, I would like to add animations/effects to the portfolio such as an interactive background and projects section to make them stand out more. I will continue to update my website as I complete more projects during my \_nology course and beyond to ensure it is an up-to-date hub for visitors to see.
 
 ## Resources
 
